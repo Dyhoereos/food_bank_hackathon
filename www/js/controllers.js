@@ -1,5 +1,9 @@
 angular.module('starter.controllers', [])
 
+// In your controllers: 
+// - `ionicMaterialInk.displayEffect()` (will need to happen once on controller activation and then repeat every time the objects update)
+// - `ionicMaterialMotion.ripple()` (etc.)
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
