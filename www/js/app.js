@@ -36,48 +36,37 @@ angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.controllers',
     templateUrl: 'templates/tabs.html'
   })
 
-  // Each tab has its own nav history stack:
-
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.news-feed', {
+    url: '/news-feed',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-news-feed': {
+        templateUrl: 'templates/tab-news-feed.html',
+        controller: 'NewsFeedCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.map', {
+      url: '/map',
       views: {
-        'tab-chats': {
+        'tab-map': {
           templateUrl: 'templates/tab-map.html',
           controller: 'MapCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/map-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.more', {
+    url: '/more',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-more': {
+        templateUrl: 'templates/tab-more.html',
+        controller: 'MoreCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/map');
 
 });
