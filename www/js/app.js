@@ -52,8 +52,8 @@ angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.controllers',
       url: '/chats',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+          templateUrl: 'templates/tab-map.html',
+          controller: 'MapCtrl'
         }
       }
     })
@@ -61,7 +61,7 @@ angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.controllers',
       url: '/chats/:chatId',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
+          templateUrl: 'templates/map-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
