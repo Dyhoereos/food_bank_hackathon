@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('food-bank.controllers', [])
 
 // In your controllers: 
 // - `ionicMaterialInk.displayEffect()` (will need to happen once on controller activation and then repeat every time the objects update)

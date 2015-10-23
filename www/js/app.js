@@ -1,11 +1,11 @@
-// Ionic Starter App
+// Ionic Food Bank App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// 'food-bank' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'starter.services'])
+// 'food-bank.services' is found in services.js
+// 'food-bank.controllers' is found in controllers.js
+angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.controllers', 'food-bank.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
