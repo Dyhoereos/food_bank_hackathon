@@ -64,6 +64,12 @@ angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.controllers',
         controller: 'MoreCtrl'
       }
     }
+  })
+
+  .state('blog', {
+    url: '/blog',
+    templateUrl: 'templates/blog.html',
+    controller: 'BlogCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
