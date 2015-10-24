@@ -114,6 +114,7 @@ i.icon.ion-ios-home-outline {
 	text-align: center;
 	float: left;
 	padding-top:6px;
+	font-size: 2vw;
 }
 
 .feedbackButtons>a.selectedCategory {
