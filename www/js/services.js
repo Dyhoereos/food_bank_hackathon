@@ -52,11 +52,17 @@ angular.module('food-bank.services', [])
 .factory('Newsposts', function() {
   
   var processNewsposts = function(rawJSON) {
-    return 0;
+    return rawJSON;
   }
 
+  var newsPostsFail = function(rawJSON) {
+    var errorPost = {content: "Error retrieving newsfeed data", poster: "", created_at: "", updated_at: "", tags: []};
+
+    return [errorPost];
+  }
 
   return {
-    all: processNewsposts
+    all: processNewsposts,
+    fail: newsPostsFail
   }
 });

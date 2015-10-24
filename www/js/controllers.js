@@ -3,23 +3,39 @@ angular.module('food-bank.controllers', [])
 // In your controllers: 
 // - `ionicMaterialInk.displayEffect()` (will need to happen once on controller activation and then repeat every time the objects update)
 // - `ionicMaterialMotion.ripple()` (etc.)
+.controller('NewsFeedCtrl', function($scope, $state, $location, $http, Newsposts) {
+  var validNewsposts = [];
 
-.controller('NewsFeedCtrl', function($scope, $state, $location, $http, $ionicPopup, Newsposts, ionicMaterialInk) {
+  var refreshNewsPage = function (validNewsposts) {
+    return 0;
+  };
+
   $http.get("http://foodbank.herokuapp.com/newsposts.json")
-  .success(function(response) {
-   Newsposts.all(response);
- }.bind(this));
+  .then(function(response) {
+   validNewsposts = Newsposts.all(response);
+   refreshNewsPage(validNewsposts);
+   }.bind(this), function() {
+    validNewsposts = Newsposts.fail();
+    refreshNewsPage(validNewsposts);
+  }.bind(this));
 
   $scope.goToBlog = function() {
     $state.go('blog');
   };
-  ionicMaterialInk
+
+  ionicMaterialInk.displayEffect();
 })
 
 .controller('MapCtrl', function($scope, $state, $location, ionicMaterialInk) {
+  $http.get("http://foodbank.herokuapp.com/newsposts.json")
+  .success(function(response) {
+   validNewsposts = Newsposts.all(response);
+  }.bind(this));
+
   $scope.goToBlog = function() {
     $state.go('blog');
   };
+  
   ionicMaterialInk.displayEffect();
 })
 
