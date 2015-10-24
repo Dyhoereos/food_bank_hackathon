@@ -19,10 +19,16 @@ angular.module('food-bank.controllers', [])
 .controller('MoreCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
   $scope.goToBlog = function() {
     $state.go('blog');
-  };
-
+  }
   ionicMaterialInk.displayEffect();
+  $scope.goToNotifications = function() {
+    $state.go('notifications');
+  }
 })
 
 .controller('BlogCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
+})
+
+.controller('NotificationCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
+
 });
