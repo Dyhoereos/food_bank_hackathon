@@ -106,6 +106,7 @@ i.icon.ion-ios-home-outline {
 .feedbackform>.feedbackInputForm>textarea {
 	margin-left: 20px;
 	width: 85%;
+	resize: none;
 }
 
 .feedbackform>.feedbackInputForm>.sendFeedbackButton {
