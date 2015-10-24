@@ -1,8 +1,22 @@
 /* Empty. Add your own CSS if you like */
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
+  font-family: "Montserrat";
 }
 
 .angular-google-map-container { 
   height: 1000px; 
+}
+
+
+h4 {
+	color: #4190C4;
+	text-transform: uppercase;
+	font-family: "Montserrat";
+	
+}
+
+.button-feedback {
+	background-color: #4190C4;
+	color: #FFFFFF;
 }
