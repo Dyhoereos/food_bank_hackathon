@@ -71,6 +71,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     controller: 'BlogCtrl'
   })
 
+  .state('about', {
+    url: '/about',
+    templateUrl: 'templates/about.html',
+    controller: 'AboutCtrl'
+  })
+
   .state('notifications', {
     url: '/notifications',
     templateUrl: 'templates/notifications.html',
