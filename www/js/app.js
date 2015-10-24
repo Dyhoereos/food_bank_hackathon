@@ -76,6 +76,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/about.html',
     controller: 'AboutCtrl'
   })
+  
+  .state('feedback', {
+    url: '/feedback',
+    templateUrl: 'templates/feedback.html',
+    controller: 'FeedbackCtrl'
+  })
 
   .state('notifications', {
     url: '/notifications',
