@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'food-bank.services' is found in services.js
 // 'food-bank.controllers' is found in controllers.js
-app = angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.services'])
+app = angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.services', 'uiGmapgoogle-maps'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -21,7 +21,7 @@ app = angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.service
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
