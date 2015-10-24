@@ -6,13 +6,13 @@
       <span>
         <div class="card stable-bg ink ink-dark bottom-padding news-format">
             <div class="item item-avatar item-text-wrap">
-                <span class="avatar" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/eb/Nic%C3%A9phore_Ni%C3%A9pce_Oldest_Photograph_1825.jpg')">
+                <span class="avatar" style="background-image: url('{{ post.avatar }}')">
                 </span>
               <strong><h1>{{ post.title }}</h1></strong><br>
                 Posted on: {{ post.updated_at }}<br>
                 Posted by: {{ post.poster}}
                 <div ng-show="expand" class="card-footer text-left show-hide">
-                    {{ post.content }}
+                    <div ng-bind-html="post.content"></div>
                     <br><br>
                     Tags: {{ post.tags }}
                 </div>

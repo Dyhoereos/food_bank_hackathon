@@ -1,22 +1,32 @@
 <ion-view view-title="Feedback">
-<ion-content class="padding scroll-bg">
+<ion-content class="padding scroll-bg feedbackformpage">
+
 <div class="feedbackform">
-<form action="URL to form script" method="POST">
+	<form class="feedbackInputForm">
+		<br>
+		<div class="center"> SEND US FEEDBACK </div>
+		<br>
+		<div class="feedbackButtons">
+			<a ng-Click="selectQuestion()" id='questionButton' class='selectedCategory'>QUESTION</a>
+			<a ng-Click="selectProblem()" id='problemButton'>PROBLEM</a>
+			<a ng-Click="selectPraise()" id='praiseButton'>PRAISE</a>
+			<a ng-Click="selectIdea()" id='ideaButton'>IDEA</a>
+		</div>
 
-	Your name: <br>
-	<input type="text" name="realname"><br>
-	<br>
-
-	Your email: <br>
-	<input type="text" name="email"><br>
-	<br>
-
-	Your comments: <br>
-	<textarea name="comments" rows="15" cols="50"></textarea><br><br>
-
-	<input type="submit" value="Submit">
-
-</form>
+		<br><br><br>
+		<div>Name (Optionsl)</div> 
+		<input type="text" name="realname" id='nameInput' class='feedbackInput'>
+		<br>
+		<div>How we can get back to you (phone number or email)</div> 
+		<input type="text" name="email" id='contactInput' class='feedbackInput'>
+		<br>
+		<div>Message</div> 
+		<textarea name="comments" rows="15" id='messageInput' class='feedbackInput'></textarea>
+		<br>
+		<input type="submit" name: "Send" value="SEND" class="sendFeedbackButton" ng-Click="handleFeedback()">
+		<br><br>
+	</form>
 </div>
+
 </ion-content>
 </ion-view>
