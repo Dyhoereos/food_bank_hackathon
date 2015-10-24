@@ -70,6 +70,12 @@ angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.controllers',
     url: '/blog',
     templateUrl: 'templates/blog.html',
     controller: 'BlogCtrl'
+  })
+
+  .state('notifications', {
+    url: '/notifications',
+    templateUrl: 'templates/notifications.html',
+    controller: 'NotificationCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback

@@ -5,15 +5,22 @@ angular.module('food-bank.controllers', [])
 // - `ionicMaterialMotion.ripple()` (etc.)
 
 .controller('NewsFeedCtrl', function($scope, $state, $location, $http, Newsposts) {
+
+  var validNewsposts = [];
+
+  var refreshNewsPage = function (validNewsposts) {
+    return 0;
+  };
+
   $http.get("http://foodbank.herokuapp.com/newsposts.json")
-    .success(function(response) {
-     Newsposts.all(response);
-     console.log(response);
+  .then(function(response) {
+   validNewsposts = Newsposts.all(response);
+   refreshNewsPage(validNewsposts);
+ }.bind(this), function() {
+  validNewsposts = Newsposts.fail();
+  refreshNewsPage(validNewsposts);
+}.bind(this))
 
-     $scope.response = response;
-
-
-   }.bind(this));
 
   $scope.goToBlog = function() {
     $state.go('blog');
@@ -21,6 +28,11 @@ angular.module('food-bank.controllers', [])
 })
 
 .controller('MapCtrl', function($scope, $state, $location) {
+  $http.get("http://foodbank.herokuapp.com/newsposts.json")
+  .success(function(response) {
+   validNewsposts = Newsposts.all(response);
+ }.bind(this));
+
   $scope.goToBlog = function() {
     $state.go('blog');
   };
@@ -29,10 +41,16 @@ angular.module('food-bank.controllers', [])
 .controller('MoreCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
   $scope.goToBlog = function() {
     $state.go('blog');
-  };
-
+  }
   ionicMaterialInk.displayEffect();
+  $scope.goToNotifications = function() {
+    $state.go('notifications');
+  }
 })
 
 .controller('BlogCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
+})
+
+.controller('NotificationCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
+
 });
