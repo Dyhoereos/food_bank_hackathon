@@ -65,6 +65,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
     }
   })
 
+  .state('tab.notifications', {
+    url: '/notifications',
+    views: {
+      'tab-notifications': {
+        templateUrl: 'templates/tab-notifications.html',
+        controller: 'MoreCtrl'
+      }
+    }
+  })
+
+
+
   .state('blog', {
     url: '/blog',
     templateUrl: 'templates/blog.html',
@@ -84,7 +96,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
 
   .state('notifications', {
-    url: '/notifications',
+    url: '/notifications2',
     templateUrl: 'templates/notifications.html',
     controller: 'NotificationCtrl'
   });
