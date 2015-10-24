@@ -4,7 +4,12 @@ angular.module('food-bank.controllers', [])
 // - `ionicMaterialInk.displayEffect()` (will need to happen once on controller activation and then repeat every time the objects update)
 // - `ionicMaterialMotion.ripple()` (etc.)
 
-.controller('NewsFeedCtrl', function($scope, $state, $location) {
+.controller('NewsFeedCtrl', function($scope, $state, $location, $http, Newsposts) {
+  $http.get("http://foodbank.herokuapp.com/newsposts.json")
+    .success(function(response) {
+     Newsposts.all(response);
+   }.bind(this));
+
   $scope.goToBlog = function() {
     $state.go('blog');
   };

@@ -47,4 +47,16 @@ angular.module('food-bank.services', [])
       return null;
     }
   };
+})
+
+.factory('Newsposts', function() {
+  
+  var processNewsposts = function(rawJSON) {
+    return 0;
+  }
+
+
+  return {
+    all: processNewsposts
+  }
 });
