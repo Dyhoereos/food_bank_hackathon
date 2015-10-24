@@ -6,6 +6,10 @@ app.controller('MoreCtrl', function($scope, $state, $location, $ionicPopup, ioni
     $state.go('notifications');
   }
 
+  $scope.goToAbout = function() {
+    $state.go('about');
+  }
+
   var feedback_content = "Example Feedback content";
 
   $scope.feedback = function() {
