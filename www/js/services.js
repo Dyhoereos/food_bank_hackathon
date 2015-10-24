@@ -49,6 +49,24 @@ angular.module('food-bank.services', [])
   };
 })
 
+.factory('foodbankLocations', function() {
+  
+  var processfoodbankLocations = function(rawJSON) {
+    return rawJSON;
+  }
+
+  var foodbankLocationsFail = function(rawJSON) {
+    var errorPost = {content: "Error retrieving newsfeed data", poster: "", created_at: "", updated_at: "", tags: []};
+
+    return [errorPost];
+  }
+
+  return {
+    all: processfoodbankLocations,
+    fail: foodbankLocationsFail
+  }
+})
+
 .factory('NewsPosts', function() {
   
   var processNewsPosts = function(rawJSON) {

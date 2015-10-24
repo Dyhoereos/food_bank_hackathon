@@ -5,7 +5,7 @@ body {
 }
 
 .angular-google-map-container { 
-  height: 50vh; 
+  height: 40vh; 
 }
 
 
@@ -19,4 +19,9 @@ h4 {
 .button-feedback {
 	background-color: #4190C4;
 	color: #FFFFFF;
+}
+
+i.icon.ion-ios-home-outline {
+	margin: 0 auto;
+	font-size: 30px;
 }
