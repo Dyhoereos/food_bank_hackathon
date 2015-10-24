@@ -1,10 +1,7 @@
 /* Empty. Add your own CSS if you like */
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
-}
-
-.angular-google-map-container {
-  height: 1000px;
+  font-family: "Montserrat";
 }
 
 .button .icon {
@@ -28,4 +25,25 @@ body {
 
 .news-format {
   border-radius: 1.5em;
+}
+
+.angular-google-map-container {
+  height: 40vh;
+}
+
+h4 {
+	color: #4190C4;
+	text-transform: uppercase;
+	font-family: "Montserrat";
+
+}
+
+.button-feedback {
+	background-color: #4190C4;
+	color: #FFFFFF;
+}
+
+i.icon.ion-ios-home-outline {
+	margin: 0 auto;
+	font-size: 30px;
 }

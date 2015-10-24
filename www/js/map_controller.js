@@ -1,8 +1,17 @@
-app.controller('MapCtrl', function($scope, $state, $location, $http, ionicMaterialInk, uiGmapGoogleMapApi) {
+app.controller('MapCtrl', function($scope, $state, $location, $http, foodbankLocations, ionicMaterialInk, uiGmapGoogleMapApi) {
   // $http.get("http://foodbank.herokuapp.com/newsposts.json")
   // .success(function(response) {
   //  validNewsPosts = NewsPosts.all(response);
   // }.bind(this));
+
+    $http.get("http://foodbank.herokuapp.com/locations.json").then(function(response) {
+        $scope.foodbankLocations = foodbankLocations.all(response.data);
+
+    }.bind(this), function() {
+        foodbankLocations = foodbankLocations.fail();
+        
+    }.bind(this));
+
   $scope.myLocation = {
     lng : '',
     lat: ''
