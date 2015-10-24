@@ -1,17 +1,17 @@
-app.controller('NewsFeedCtrl', function($scope, $state, $location, $http, Newsposts, ionicMaterialInk) {
-    var validNewsposts = [];
+app.controller('NewsFeedCtrl', function($scope, $state, $location, $http, NewsPosts, ionicMaterialInk) {
+    var validNewsPosts = [];
 
-    var refreshNewsPage = function (validNewsposts) {
+    var refreshNewsPage = function (validNewsPosts) {
         return 0;
     };
 
     $http.get("http://foodbank.herokuapp.com/newsposts.json").then(function(response) {
-        $scope.validNewsposts = Newsposts.all(response.data);
-        refreshNewsPage(validNewsposts);
+        $scope.validNewsPosts = NewsPosts.all(response.data);
+        refreshNewsPage(validNewsPosts);
 
     }.bind(this), function() {
-        validNewsposts = Newsposts.fail();
-        refreshNewsPage(validNewsposts);
+        validNewsPosts = NewsPosts.fail();
+        refreshNewsPage(validNewsPosts);
         
     }.bind(this));
 

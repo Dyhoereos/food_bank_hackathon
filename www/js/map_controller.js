@@ -1,7 +1,7 @@
-app.controller('MapCtrl', function($scope, $state, $location, $http, ionicMaterialInk) {
+app.controller('MapCtrl', function($scope, $state, $location, $http, ionicMaterialInk, NewsPosts) {
   $http.get("http://foodbank.herokuapp.com/newsposts.json")
   .success(function(response) {
-   validNewsposts = Newsposts.all(response);
+   validNewsPosts = NewsPosts.all(response);
   }.bind(this));
 
   $scope.goToBlog = function() {
