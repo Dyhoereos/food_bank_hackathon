@@ -3,6 +3,29 @@ body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
 
-.angular-google-map-container { 
-  height: 1000px; 
+.angular-google-map-container {
+  height: 1000px;
+}
+
+.button .icon {
+  padding: 0 !important;
+}
+
+.dots {
+  vertical-align: middle;
+  padding: .5em 0 .5em 0;
+}
+
+.dots img {
+  box-shadow: none !important;
+  height: auto;
+  width: auto;
+}
+
+.bottom-padding {
+  margin-bottom: 1.5em;
+}
+
+.news-format {
+  border-radius: 1.5em;
 }

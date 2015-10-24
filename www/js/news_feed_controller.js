@@ -1,4 +1,7 @@
 app.controller('NewsFeedCtrl', function($scope, $state, $location, $http, NewsPosts, ionicMaterialInk) {
+
+    ionicMaterialInk.displayEffect();
+
     var validNewsPosts = [];
 
     var refreshNewsPage = function (validNewsPosts) {
@@ -12,12 +15,10 @@ app.controller('NewsFeedCtrl', function($scope, $state, $location, $http, NewsPo
     }.bind(this), function() {
         validNewsPosts = NewsPosts.fail();
         refreshNewsPage(validNewsPosts);
-        
+
     }.bind(this));
 
     $scope.goToBlog = function() {
         $state.go('blog');
     };
-
-    ionicMaterialInk.displayEffect();
 });
