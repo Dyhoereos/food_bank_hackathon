@@ -47,3 +47,22 @@ i.icon.ion-ios-home-outline {
 	margin: 0 auto;
 	font-size: 30px;
 }
+
+.button-feedback {
+	background-color: #4190C4;
+	color: #FFFFFF;
+}
+
+/*change the "ios"? */
+.tab-nav, .tabs, [nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+	background-color: #4190C4;
+}
+
+.bar, .bar .title {
+	height: 28px;
+	line-height: 28px;
+}
+
+.tab-title, .icon, .bar.bar-stable .title{
+	color: #FFFFFF;
+}
