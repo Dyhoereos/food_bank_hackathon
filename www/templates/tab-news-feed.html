@@ -1,13 +1,23 @@
 <ion-view view-title="News Feed">
-  <ion-content class="padding">
-    <h1> In News Feed </h1>
-      <div class="list card" ng-repeat="post in validNewsPosts">
-        <div class="item item-divider">Blog</div>
-        <div class="item item-body">
-          <div>
-            {{ post.content }}
-          </div>
+  <ion-content class="padding scroll-bg">
+
+        <div class="card stable-bg ink ink-dark" ng-repeat="post in validNewsPosts">
+            <div class="item item-avatar item-text-wrap">
+                <span class="avatar">
+                    <label>
+                      <input type="checkbox" style="display: none" ng-model="expand" value="1"><span><button class="button button-fab btn-floating button-energized-900"><i class="icon ion-plus"></i></button></span>
+                    </label>
+                </span>
+              <strong>{{ post.title }}</strong><br>
+                Posted on: {{ post.updated_at }}<br>
+                Posted by: {{ post.poster}}
+                <div ng-show="expand" class="card-footer text-left show-hide">
+                    {{ post.content }}
+                    <br><br>
+                    Tags: {{ post.tags }}
+                </div>
+            </div>
         </div>
-      </div>
+
   </ion-content>
 </ion-view>
