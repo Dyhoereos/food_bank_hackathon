@@ -1,5 +1,6 @@
 <ion-view view-title="News Feed">
   <ion-content class="padding">
+  <!--
     <div class="list card">
       <div class="item item-divider">Notification</div>
       <div class="item item-body">
@@ -23,6 +24,16 @@
           Keep on reading babes
         </div>
       </div>
-    </div>
+    </div> -->
+
+      <div class="list card" ng-repeat="x in response">
+        <div class="item item-divider">Blog</div>
+        <div class="item item-body">
+          <div>
+            {{ x.content }}
+          </div>
+        </div>
+      </div>
+
   </ion-content>
 </ion-view>

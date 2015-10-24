@@ -8,6 +8,11 @@ angular.module('food-bank.controllers', [])
   $http.get("http://foodbank.herokuapp.com/newsposts.json")
     .success(function(response) {
      Newsposts.all(response);
+     console.log(response);
+
+     $scope.response = response;
+
+
    }.bind(this));
 
   $scope.goToBlog = function() {

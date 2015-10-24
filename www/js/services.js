@@ -55,7 +55,6 @@ angular.module('food-bank.services', [])
     return 0;
   }
 
-
   return {
     all: processNewsposts
   }
