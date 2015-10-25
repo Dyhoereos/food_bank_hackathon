@@ -24,11 +24,11 @@ body {
 }
 
 .news-format {
-  border-radius: 0.5em;
+  border-radius: 0.3em;
 }
 
 .notification-format {
-  border-radius: 1.5em;
+  border-radius: 0.5em;
   background-color: #f6f7f7 !important;
 }
 
