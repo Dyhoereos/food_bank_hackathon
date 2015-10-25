@@ -23,14 +23,20 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
   }
 
   var sendFeedback = function(jsonFeedback) {
-  	var sendconfig = {headers: {
-        "Content-Type": "application/json"
-    }}
+  	var sendconfig = {
+  		type:"POST",
+  		headers: { 
+  			"Accept" : "application/json; charset=utf-8"
+  		},
+  		contentType:"application/json; charset=utf-8",
+  		dataType:"json",
+  		data: jsonFeedback,
+  		url: "http://foodbank.herokuapp.com/feedbacks"};
 
-  	$http.post("http://foodbank.herokuapp.com/feedbacks", jsonFeedback, sendconfig).then(function() {
+  	$http(sendconfig).then(function() {
   		onFeedbackSuccess();
   	},
-  	function(error) {
+  	function(headers) {
   		onFeedbackFailure();
   	})
   };
