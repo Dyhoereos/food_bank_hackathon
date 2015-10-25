@@ -24,7 +24,7 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
 
   var sendFeedback = function(jsonFeedback) {
   	var sendconfig = {
-  		type:"POST",
+  		method:"POST",
   		headers: { 
   			"Accept" : "application/json; charset=utf-8"
   		},
