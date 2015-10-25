@@ -25,8 +25,7 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
   var sendFeedback = function(jsonFeedback) {
   	var sendconfig = {headers: {
         "Content-Type": "application/json"
-    },
-	responseType: "json"}
+    }}
 
   	$http.post("http://foodbank.herokuapp.com/feedbacks", jsonFeedback, sendconfig).then(function() {
   		onFeedbackSuccess();
@@ -47,6 +46,7 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
             title: 'Empty Message Error',
             template: 'Please enter a feedback message'
         });
+        return 0;
         
     }
 
