@@ -1,7 +1,41 @@
-app.controller('FeedbackCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
+app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionicPopup, ionicMaterialInk) {
   ionicMaterialInk.displayEffect();
 
   var feedbackType = 'Question';
+
+
+  var onFeedbackSuccess = function() {
+  	var alertPopup = $ionicPopup.alert({
+            title: 'Feedback Sent',
+            template: 'Thanks for contacting us!'
+        }).then(function() {
+        	$state.go('about');
+        	}.bind(this));
+        return 0;
+  };
+
+  var onFeedbackFailure = function() {
+  	var alertPopup = $ionicPopup.alert({
+            title: 'Message Send Failure',
+            template: 'Please make sure you are connected to the internet'
+        });
+        return 0;
+  }
+
+  var sendFeedback = function(jsonFeedback) {
+  	var sendconfig = {headers: {
+        "Content-Type": "application/json"
+    },
+	responseType: "json"}
+
+  	$http.post("http://foodbank.herokuapp.com/feedbacks", jsonFeedback, sendconfig).then(function() {
+  		onFeedbackSuccess();
+  	},
+  	function(error) {
+  		onFeedbackFailure();
+  	})
+  };
+
 
    $scope.handleFeedback = function() {
     var fullName = $('#nameInput').val();
@@ -13,10 +47,12 @@ app.controller('FeedbackCtrl', function($scope, $state, $location, $ionicPopup, 
             title: 'Empty Message Error',
             template: 'Please enter a feedback message'
         });
-        return 0;
+        
     }
 
     var feedback = {category: feedbackType, name: fullName, contact: contactInfo, message: messageInfo};
+
+    sendFeedback(feedback);
 
     return 0;
   }
