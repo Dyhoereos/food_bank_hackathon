@@ -14,17 +14,17 @@
 		</div>
 
 		<br><br><br>
-		<div>Name (Optionsl)</div> 
-		<input type="text" name="realname" id='nameInput' class='feedbackInput'>
+		<div>Name (Optional)</div> 
+		<input type="text" name="realname" id='nameInput' class='feedbackInput' maxlength=10000>
 		<br>
 		<div>How we can get back to you (phone number or email)</div> 
-		<input type="text" name="email" id='contactInput' class='feedbackInput'>
+		<input type="text" name="email" id='contactInput' class='feedbackInput' maxlength=10000>
 		<br>
 		<div>Message</div> 
-		<textarea name="comments" rows="15" id='messageInput' class='feedbackInput'></textarea>
+		<textarea name="comments" rows="15" id='messageInput' class='feedbackInput' maxlength=10000></textarea>
 		<br>
 		<input type="submit" name: "Send" value="SEND" class="sendFeedbackButton" ng-Click="handleFeedback()">
-
+		<br><br>
 	</form>
 </div>
 

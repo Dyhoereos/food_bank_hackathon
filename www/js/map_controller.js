@@ -51,5 +51,4 @@ app.controller('MapCtrl', function($scope, $state, $location, $http, foodbankLoc
   }
  
   navigator.geolocation.getCurrentPosition($scope.drawMap);
-  ionicMaterialInk.displayEffect();
 });
