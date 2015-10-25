@@ -1,7 +1,12 @@
 <ion-view view-title="News Feed">
   <ion-content class="padding scroll-bg">
+  
+    <label class="item item-input">
+      <span class="input-label" ng-model="test" placeholder="Search"></span>
+      <input type="text" ng-model="test" placeholder="Search">
+    </label>
 
-    <label ng-repeat="post in validNewsPosts">
+    <label ng-repeat="post in validNewsPosts | filter: {tags: {name: test}}">
       <input type="checkbox" style="display: none" ng-model="expand" value="1">
       <span>
         <div class="card stable-bg ink ink-dark bottom-padding news-format">
