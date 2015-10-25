@@ -49,7 +49,7 @@ app.directive('map', function() {
 
                     map.setCenter(initialLocation);
 
-                    var image = 'lib/images/foodbank.jpg';
+                    var image = 'lib/images/foodbank.png';
 
                     var marker = new google.maps.Marker({
                         position: initialLocation,
