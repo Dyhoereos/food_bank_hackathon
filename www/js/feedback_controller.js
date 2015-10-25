@@ -1,4 +1,4 @@
-app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionicPopup, ionicMaterialInk) {
+app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionicPopup, ionicMaterialInk, $ionicHistory) {
   
 
   var feedbackType = 'Question';
@@ -86,5 +86,9 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
   	$('.selectedCategory').removeClass('selectedCategory');
   	$('#ideaButton').addClass('selectedCategory');
   }
+
+  $scope.myGoBack = function() {
+    $state.go('tab.more');
+  };
 
 })
