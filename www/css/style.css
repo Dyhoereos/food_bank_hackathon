@@ -65,6 +65,10 @@ i.icon.ion-ios-home-outline {
 	background-color: #4190C4;
 }
 
+.tab-nav, .tabs, [nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar {
+	background-color: #4190C4;
+}
+
 .bar, .bar .title {
 	height: 28px;
 	line-height: 28px;
