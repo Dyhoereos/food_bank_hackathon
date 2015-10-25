@@ -1,7 +1,5 @@
 app.controller('NotificationCtrl', function($scope, $state, $location, $http, NewsPosts, ionicMaterialInk) {
 
-    ionicMaterialInk.displayEffect();
-
     var validNewsPosts = [];
 
     var formatTags = function (tagsArray) {

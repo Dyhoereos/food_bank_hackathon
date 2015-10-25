@@ -1,6 +1,6 @@
 app.controller('NewsFeedCtrl', function($scope, $state, $location, $http, NewsPosts, ionicMaterialInk) {
 
-    ionicMaterialInk.displayEffect();
+    
 
     var validNewsPosts = [];
 

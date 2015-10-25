@@ -1,5 +1,5 @@
 app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionicPopup, ionicMaterialInk) {
-  ionicMaterialInk.displayEffect();
+  
 
   var feedbackType = 'Question';
 
