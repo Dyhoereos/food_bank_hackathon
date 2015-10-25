@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'food-bank.services' is found in services.js
 // 'food-bank.controllers' is found in controllers.js
-app = angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.services', 'uiGmapgoogle-maps'])
+app = angular.module('food-bank', ['ionic', 'ionic-material', 'food-bank.services'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

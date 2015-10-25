@@ -27,8 +27,8 @@ body {
   border-radius: 0.5em;
 }
 
-.angular-google-map-container {
-  height: 45vh;
+#map{
+    height:350px;
 }
 
 h3 {
