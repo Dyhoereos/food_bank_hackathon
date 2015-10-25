@@ -70,7 +70,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     views: {
       'tab-notifications': {
         templateUrl: 'templates/tab-notifications.html',
-        controller: 'MoreCtrl'
+        controller: 'NotificationCtrl'
       }
     }
   })
@@ -88,18 +88,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: 'templates/about.html',
     controller: 'AboutCtrl'
   })
-  
+
   .state('feedback', {
     url: '/feedback',
     templateUrl: 'templates/feedback.html',
     controller: 'FeedbackCtrl'
   })
 
-  .state('notifications', {
-    url: '/notifications2',
-    templateUrl: 'templates/notifications.html',
-    controller: 'NotificationCtrl'
-  });
+  // .state('notifications', {
+  //   url: '/notifications2',
+  //   templateUrl: 'templates/tab-notifications.html',
+  //   controller: 'NotificationCtrl'
+  // });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/map');

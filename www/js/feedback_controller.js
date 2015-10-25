@@ -1,5 +1,5 @@
-app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionicPopup, ionicMaterialInk) {
-  ionicMaterialInk.displayEffect();
+app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionicPopup, ionicMaterialInk, $ionicHistory) {
+  
 
   var feedbackType = 'Question';
 
@@ -9,7 +9,7 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
             title: 'Feedback Sent',
             template: 'Thanks for contacting us!'
         }).then(function() {
-        	$state.go('about');
+        	$state.go('tab.more');
         	}.bind(this));
         return 0;
   };
@@ -23,15 +23,20 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
   }
 
   var sendFeedback = function(jsonFeedback) {
-  	var sendconfig = {headers: {
-        "Content-Type": "application/json"
-    },
-	responseType: "json"}
+  	var sendconfig = {
+  		method:"POST",
+  		headers: { 
+  			"Accept" : "application/json; charset=utf-8"
+  		},
+  		contentType:"application/json; charset=utf-8",
+  		dataType:"json",
+  		data: jsonFeedback,
+  		url: "http://foodbank.herokuapp.com/feedbacks"};
 
-  	$http.post("http://foodbank.herokuapp.com/feedbacks", jsonFeedback, sendconfig).then(function() {
+  	$http(sendconfig).then(function() {
   		onFeedbackSuccess();
   	},
-  	function(error) {
+  	function(headers) {
   		onFeedbackFailure();
   	})
   };
@@ -47,6 +52,7 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
             title: 'Empty Message Error',
             template: 'Please enter a feedback message'
         });
+        return 0;
         
     }
 
@@ -80,5 +86,9 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
   	$('.selectedCategory').removeClass('selectedCategory');
   	$('#ideaButton').addClass('selectedCategory');
   }
+
+  $scope.myGoBack = function() {
+    $state.go('tab.more');
+  };
 
 })

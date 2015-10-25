@@ -1,3 +1,5 @@
 app.controller('AboutCtrl', function($scope, $state, $location, $ionicPopup, ionicMaterialInk) {
-  ionicMaterialInk.displayEffect();
+  $scope.goToFeedback = function() {
+		$state.go('feedback');
+	}
 })

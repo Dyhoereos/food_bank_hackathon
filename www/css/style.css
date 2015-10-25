@@ -24,7 +24,12 @@ body {
 }
 
 .news-format {
+  border-radius: 0.3em;
+}
+
+.notification-format {
   border-radius: 0.5em;
+  background-color: #f6f7f7 !important;
 }
 
 #map{
@@ -65,9 +70,14 @@ i.icon.ion-ios-home-outline {
 	background-color: #4190C4;
 }
 
+.tab-nav, .tabs, [nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar {
+	background-color: #4190C4;
+}
+
 .bar, .bar .title {
 	height: 28px;
 	line-height: 28px;
+	font-size: 10px;
 }
 
 .tab-title, .icon, .bar.bar-stable .title{
@@ -76,6 +86,7 @@ i.icon.ion-ios-home-outline {
 
 .feedbackformpage {
 	background-color: #E6E7E8;
+	margin-top: -3%;
 }
 
 /*.feedbackform {
@@ -125,7 +136,6 @@ i.icon.ion-ios-home-outline {
 	max-width: 100px;
 	color: white;
 	background-color: #4190C4;
-	border-radius: 15px;
 	height: 35px;
 }
 
@@ -150,3 +160,8 @@ i.icon.ion-ios-home-outline {
 	color: #4190C4;
 }
 
+#searchBox{
+	border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
