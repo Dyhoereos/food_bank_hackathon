@@ -15,8 +15,8 @@ body {
 
 .dots img {
   box-shadow: none !important;
-  height: auto;
-  width: auto;
+  height: 3px;
+  width: 15px;
 }
 
 .bottom-padding {
@@ -24,7 +24,7 @@ body {
 }
 
 .news-format {
-  border-radius: 1.5em;
+  border-radius: 0.5em;
 }
 
 .angular-google-map-container {
