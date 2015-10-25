@@ -9,7 +9,7 @@ app.controller('FeedbackCtrl', function($http, $scope, $state, $location, $ionic
             title: 'Feedback Sent',
             template: 'Thanks for contacting us!'
         }).then(function() {
-        	$state.go('about');
+        	$state.go('tab.more');
         	}.bind(this));
         return 0;
   };
