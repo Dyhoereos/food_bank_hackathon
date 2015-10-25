@@ -16,11 +16,12 @@
                 </span>
               <strong><h3 style="margin-top: 28px; text-transform: uppercase;">{{ post.title}}</h3> </strong>  
                 <div ng-show="expand" class="card-footer text-left show-hide">
-                <p style="text-transform: lowercase;">by <b>{{post.poster}}</b> </p>
-                  {{ post.updated_at }}
+                <p style="text-transform: lowercase;">by <b>{{post.poster}}</b> on <b> {{ post.updated_at }} </b> </p>
                     <div ng-bind-html="post.content"></div>
                     <br>
-                    Tags: {{ post.tags }}
+                     <label ng-repeat="tag in post.tags" style="color: green;">
+                      <u> {{ tag.name }} </u>
+                      </label>
                 </div>
             </div>
             <div ng-show="!expand" class="dots" align="center">
