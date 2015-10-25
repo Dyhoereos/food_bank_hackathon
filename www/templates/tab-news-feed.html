@@ -17,7 +17,7 @@
                 </span>
               <strong><h3 style="margin-top: 28px; text-transform: uppercase;">{{ post.title}}</h3> </strong>  
                 <div ng-show="expand" class="card-footer text-left show-hide">
-                <p style="text-transform: lowercase;">by <b>{{post.poster}}</b> on <b> {{ post.updated_at }} </b> </p>
+                <p>by <b>{{post.poster}}</b> on <b> {{ post.updated_at }} </b> </p>
                     <div ng-bind-html="post.content"></div>
                     <br>
                      <label ng-repeat="tag in post.tags" style="color: green;">
