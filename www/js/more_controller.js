@@ -13,5 +13,5 @@ app.controller('MoreCtrl', function($scope, $state, $location, $ionicPopup, ioni
     $state.go('about');
   }
 
-  ionicMaterialInk.displayEffect();
+  
 });
