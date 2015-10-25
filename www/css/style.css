@@ -108,12 +108,14 @@ i.icon.ion-ios-home-outline {
 .feedbackform>.feedbackInputForm>input {
 	margin-left: 20px;
 	width: 85%;
+	padding-left: 5px;
 }
 
 .feedbackform>.feedbackInputForm>textarea {
 	margin-left: 20px;
 	width: 85%;
 	resize: none;
+	padding: 5px;
 }
 
 .feedbackform>.feedbackInputForm>.sendFeedbackButton {
