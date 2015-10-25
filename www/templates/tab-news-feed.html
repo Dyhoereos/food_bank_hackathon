@@ -3,10 +3,13 @@
     <ion-refresher pulling-text="Pull to refresh" on-refresh="doRefresh()">
     </ion-refresher>
     <ion-list>
-    <label class="item item-input">
-      <span class="input-label" ng-model="test" placeholder="Search"></span>
-      <input type="text" ng-model="test" placeholder="Filter by tag">
-    </label>
+    <div id="searchBox">
+      <label class="item item-input">
+        <span class="input-label" ng-model="test" placeholder="Search"></span>
+        <input type="text" ng-model="test" placeholder="Filter by tag">
+      </label>
+    </div>
+
     <br>
 
     <label ng-repeat="post in validNewsPosts | filter: {tags: {name: test}}">

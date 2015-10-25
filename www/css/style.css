@@ -159,3 +159,9 @@ i.icon.ion-ios-home-outline {
 .feedbackButtons>a.selectedCategory {
 	color: #4190C4;
 }
+
+#searchBox{
+	border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
