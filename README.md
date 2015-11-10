@@ -17,12 +17,14 @@ $ ionic serve
 
 In order to compile to a mobile version such as iOS or Android, you can run:
 
-// If you're on OSX
+If you're on OSX
 ```
 $ ionic build ios
 $ ionic emulate ios
 ```
 or 
+
+If you're on Windows or OSX
 ```
 $ ionic build android
 $ ionic emulate android
