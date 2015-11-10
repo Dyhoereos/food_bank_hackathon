@@ -6,6 +6,17 @@ In order to run this, you will need to have the Ionic Framework installed on you
 
 http://ionicframework.com/getting-started/
 
+If you have npm installed, you can try doing
+
+```
+npm install -g ionic
+```
+
+# Screenshots
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+
 # Commands
 
 Once installed, you can run and the app will start running on your default browser.
