@@ -8,13 +8,12 @@ http://ionicframework.com/getting-started/
 
 # Commands
 
-Once installed, you can run
+Once installed, you can run and the app will start running on your default browser.
 
 ```
 $ ionic serve
 ```
 
-and the app will start running on your default browser.
 
 In order to compile to a mobile version such as iOS or Android, you can run:
 
